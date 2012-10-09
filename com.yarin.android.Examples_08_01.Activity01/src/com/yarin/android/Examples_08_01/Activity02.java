@@ -38,7 +38,8 @@ public class Activity02 extends Activity {
 		if (url != null) {
 			try {
 				// Tom Xue: HttpURLConnection --getInputStream--> 
-				// InputStreamReader -> BufferedReader --readLine--> ...
+				// InputStreamReader(byte stream->character stream) -> 
+				// BufferedReader(8192 characters) --readLine(1 line)--> ...
 				// 使用HttpURLConnection打开连接
 				HttpURLConnection urlConn = (HttpURLConnection) url
 						.openConnection();

@@ -28,7 +28,7 @@ public class Activity04 extends Activity {
 		setContentView(R.layout.http);
 
 		TextView mTextView = (TextView) this.findViewById(R.id.TextView_HTTP);
-		// http地址"?par=abcdefg"是我们上传的参数
+		// http地址"?par=ABCDEFG"是我们上传的参数
 		String httpUrl = "http://10.0.2.2:8080/httpGet.jsp";
 		// 获得的数据
 		String resultData = "";
@@ -44,7 +44,9 @@ public class Activity04 extends Activity {
 				// 使用HttpURLConnection打开连接
 				HttpURLConnection urlConn = (HttpURLConnection) url
 						.openConnection();
+				/* ........................................................................................... */
 				// 因为这个是post请求,设立需要设置为true
+				// allow both output and input of this URLConnection
 				urlConn.setDoOutput(true);
 				urlConn.setDoInput(true);
 				// 设置以POST方式
@@ -55,11 +57,13 @@ public class Activity04 extends Activity {
 				urlConn.setInstanceFollowRedirects(true);
 				// 配置本次连接的Content-type，配置为application/x-www-form-urlencoded的
 				urlConn.setRequestProperty("Content-Type",
-						"application/x-www-form-urlencoded");
+						"application/x-www-form-urlencoded");  // see below URLEncoder.encode
 				// 连接，从postUrl.openConnection()至此的配置必须要在connect之前完成，
 				// 要注意的是connection.getOutputStream会隐含的进行connect。
+				/* ........................................................................................... */
+				/* ........................................................................................... */
 				urlConn.connect();
-				// DataOutputStream流
+				// DataOutputStream流: to web server
 				DataOutputStream out = new DataOutputStream(
 						urlConn.getOutputStream());
 				// 要上传的参数
@@ -70,6 +74,8 @@ public class Activity04 extends Activity {
 				// 刷新、关闭
 				out.flush();
 				out.close();
+				/* ........................................................................................... */
+				
 				// 获取数据
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(urlConn.getInputStream()));
