@@ -58,8 +58,8 @@ public class PostActivity extends Activity {
 				// 配置本次连接的Content-type，配置为application/x-www-form-urlencoded的
 				urlConn.setRequestProperty("Content-Type",
 						"application/x-www-form-urlencoded");  // see below URLEncoder.encode
-				// 连接，从postUrl.openConnection()至此的配置必须要在connect之前完成，
-				// 要注意的是connection.getOutputStream会隐含的进行connect。
+				// 连接，从url.openConnection()至此的配置必须要在connect之前完成，
+				// 要注意的是urlConn.getOutputStream会隐含的进行connect。
 				/* ........................................................................................... */
 				/* ........................................................................................... */
 				urlConn.connect();
@@ -68,7 +68,7 @@ public class PostActivity extends Activity {
 						urlConn.getOutputStream());
 				// 要上传的参数
 				String content = "par="
-						+ URLEncoder.encode("ABCDEFG", "gb2312");
+						+ URLEncoder.encode("ABCDEFG", "gb2312");	// 此处编码和httpGet.jsp中保持一致
 				// 将要上传的内容写入流中
 				out.writeBytes(content);
 				// 刷新、关闭
