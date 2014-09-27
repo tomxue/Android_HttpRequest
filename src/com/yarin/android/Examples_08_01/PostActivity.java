@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 //以post方式上传参数
 public class PostActivity extends Activity {
-	private final String DEBUG_TAG = "Activity04";
+	private final String DEBUG_TAG = "PostActivity";
 
 	/** Called when the activity is first created. */
 	@Override

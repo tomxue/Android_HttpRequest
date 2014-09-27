@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 //直接获取数据
 public class HttpActivity extends Activity {
-	private final String DEBUG_TAG = "Activity02";
+	private final String DEBUG_TAG = "HttpActivity";
 
 	/** Called when the activity is first created. */
 	@Override

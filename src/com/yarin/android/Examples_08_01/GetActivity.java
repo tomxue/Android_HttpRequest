@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 //以Get方式上传参数
 public class GetActivity extends Activity {
-	private final String DEBUG_TAG = "Activity03";
+	private final String DEBUG_TAG = "GetActivity";
 
 	/** Called when the activity is first created. */
 	@Override
