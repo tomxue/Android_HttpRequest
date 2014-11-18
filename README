@@ -1,0 +1,9 @@
+Computer side as Web server:
+    (1) Install Tomcat
+    (2) Install 360 portable wifi
+    (3) Start Tomcat
+    (4) Put those jsp files here: C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps\ROOT
+    (5) Under Windows, command line, ipconfig to find the local IP, e.g. 192.168.0.7
+    
+Android phone side:
+    Just press those buttons, and should be able to see the jsp file content with dynamic return part
