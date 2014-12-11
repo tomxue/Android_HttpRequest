@@ -29,7 +29,8 @@ public class PostActivity extends Activity {
 
 		TextView mTextView = (TextView) this.findViewById(R.id.TextView_HTTP);
 		// http地址"?par=ABCDEFG"是我们上传的参数
-		String httpUrl = "http://192.168.0.7:8080/httpGet.jsp";
+//		String httpUrl = "http://192.168.0.7:8080/httpGet.jsp";
+		String httpUrl = "http://tomxuejavaweb.jd-app.com/httpGet.jsp";
 		// 获得的数据
 		String resultData = "";
 		URL url = null;
@@ -68,7 +69,7 @@ public class PostActivity extends Activity {
 						urlConn.getOutputStream());
 				// 要上传的参数
 				String content = "par="
-						+ URLEncoder.encode("ABCDEFG", "gb2312");	// 此处编码和httpGet.jsp中保持一致
+						+ URLEncoder.encode("postFromTomXueAndroidApp", "gb2312");	// 此处编码和httpGet.jsp中保持一致
 				// 将要上传的内容写入流中
 				out.writeBytes(content);
 				// 刷新、关闭
