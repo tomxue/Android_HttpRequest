@@ -26,7 +26,8 @@ public class GetActivity extends Activity {
 		setContentView(R.layout.http);
 		TextView mTextView = (TextView) this.findViewById(R.id.TextView_HTTP);
 		// http地址"?par=abcdefg"是我们上传的参数
-		String httpUrl = "http://192.168.0.7:8080/httpGet.jsp?par=test";
+//		String httpUrl = "http://192.168.0.7:8080/httpGet.jsp?par=test";
+		String httpUrl = "http://tomxuejavaweb.jd-app.com/httpGet.jsp?par=fromTomXueAndroidApp";
 		// 获得的数据
 		String resultData = "";
 		URL url = null;

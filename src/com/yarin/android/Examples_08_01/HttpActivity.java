@@ -25,7 +25,8 @@ public class HttpActivity extends Activity {
 		setContentView(R.layout.http);
 		TextView mTextView = (TextView) this.findViewById(R.id.TextView_HTTP);
 		// http地址
-		String httpUrl = "http://192.168.0.7:8080/http.jsp";
+//		String httpUrl = "http://192.168.0.7:8080/http.jsp";
+		String httpUrl = "http://tomxuejavaweb.jd-app.com/test.jsp";
 		// 获得的数据
 		String resultData = "";
 		URL url = null;
